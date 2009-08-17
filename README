@@ -1,0 +1,13 @@
+#
+# Author: Rogério Carvalho Schneider <stockrt@gmail.com>
+# URL:    http://stockrt.github.com
+#
+
+Provides an easy way to put your workling under daemontools supervise.
+
+Setting the user and group for workling daemon:
+    groupadd workling
+    useradd -g workling -s /bin/false workling
+
+daemontools: http://cr.yp.to/daemontools.html
+Main project: http://github.com/purzelrakete/workling

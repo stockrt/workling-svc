@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#
+# Author: Rogério Carvalho Schneider <stockrt@gmail.com>
+# URL:    http://stockrt.github.com
+#
+
+# WORKLING_USER and WORKLING_BASEDIR
+source /usr/local/workling-svc/conf/workling-svc.conf && \
+cd $WORKLING_BASEDIR && \
+exec setuidgid $WORKLING_USER /usr/bin/ruby script/workling_client run
