@@ -9,5 +9,7 @@
 source /usr/local/workling-svc/conf/workling-svc.conf
 source $ORACLE_EXPORTS_SCRIPT
 
+export RAILS_ENV
+
 cd $WORKLING_BASEDIR && \
 exec setuidgid $WORKLING_USER /usr/bin/ruby script/workling_client run

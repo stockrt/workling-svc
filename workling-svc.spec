@@ -1,6 +1,6 @@
 Name:      workling-svc
 Version:   0.1.0
-Release:   3
+Release:   4
 Summary:   workling-svc daemontools configuration
 Group:     System/Server
 URL:       http://stockrt.github.com
@@ -58,6 +58,7 @@ workling-svc daemontools configuration
 svcdir=workling
 %svc_mkrun
 #!/bin/bash
+exec 2>&1
 exec %{_prefix}/local/%{name}/bin/%{name}
 %svc_mklogrun
 #!/bin/bash
@@ -71,6 +72,9 @@ svclist='workling'
 %svc_unregsrv
 
 %changelog
+* Tue Aug 18 2009 - Rogério Carvalho Schneider <stockrt@gmail.com> - 0.1.0-4
+- Added exec fd redir (exec 2>&1) and the needed export RAILS_ENV
+
 * Tue Aug 18 2009 - Rogério Carvalho Schneider <stockrt@gmail.com> - 0.1.0-3
 - ORACLE_HOME exports (ORACLE_EXPORTS_SCRIPT) added in config file and sample
 for oracle_home.sh included inside misc/
