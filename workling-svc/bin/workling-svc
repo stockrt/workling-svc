@@ -5,10 +5,9 @@
 # URL:    http://stockrt.github.com
 #
 
-# WORKLING_USER, WORKLING_BASEDIR and RAILS_ENV
+# WORKLING_USER, WORKLING_BASEDIR, RAILS_ENV and ORACLE_EXPORTS_SCRIPT
 source /usr/local/workling-svc/conf/workling-svc.conf
-
-export RAILS_ENV
+source $ORACLE_EXPORTS_SCRIPT
 
 cd $WORKLING_BASEDIR && \
 exec setuidgid $WORKLING_USER /usr/bin/ruby script/workling_client run

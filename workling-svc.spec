@@ -1,6 +1,6 @@
 Name:      workling-svc
 Version:   0.1.0
-Release:   1
+Release:   3
 Summary:   workling-svc daemontools configuration
 Group:     System/Server
 URL:       http://stockrt.github.com
@@ -71,5 +71,12 @@ svclist='workling'
 %svc_unregsrv
 
 %changelog
+* Tue Aug 18 2009 - Rogério Carvalho Schneider <stockrt@gmail.com> - 0.1.0-3
+- ORACLE_HOME exports (ORACLE_EXPORTS_SCRIPT) added in config file and sample
+for oracle_home.sh included inside misc/
+
+* Tue Aug 18 2009 - Rogério Carvalho Schneider <stockrt@gmail.com> - 0.1.0-2
+- Added second stage bootstrap
+
 * Mon Jun  8 2009 - Rogério Carvalho Schneider <stockrt@gmail.com> - 0.1.0-1
 - Initial packing
